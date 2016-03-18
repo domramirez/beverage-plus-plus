@@ -1,14 +1,12 @@
 <template name="blockHeader">
 
-	<header>
-		<div class="logo">Beverage++</div>
-		<div class="user">
-			{{#if isLoggedIn}}
-                <a class="logout">Log out</a>
-            {{else}}
-                {{> loginButtons}}
-            {{/if}}
-		</div>
-	</header>
+	<div class="logo">Beverage++</div>
+	<div class="user">
+		{{#if isLoggedIn}}
+			<a class="logout">Log out</a>
+		{{else}}
+			{{> loginButtons}}
+		{{/if}}
+	</div>
 
 </template>
