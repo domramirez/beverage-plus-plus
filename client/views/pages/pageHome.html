@@ -1,0 +1,16 @@
+<template name="pageHome">
+
+    {{#if categories}}
+    <ul>
+        {{#each categories}}
+            {{> blockListing category=this}}
+        {{/each}}
+    </ul>
+    {{else}}
+        <div class="warning">
+            <h1>Oh no!</h1>
+            <p>It looks like there are no drinks to be drunk. Add some via command line!</p>
+        </div>
+    {{/if}}
+
+</template>

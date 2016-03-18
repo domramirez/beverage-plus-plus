@@ -1,0 +1,21 @@
+<template name="blockListing">
+
+    {{#with category}}
+
+    <li class="listing">
+        <div class="count">
+	        <span class="icon fa fa-{{icon}}"></span>
+            <span class="total">{{count}}</span>
+            {{#if isLoggedIn}}
+                <a class="button plusOne">+1</a>
+            {{/if}}
+        </div>
+        <div class="progressWrap">
+            <div class="progressInsert" style="width:{{totalPercent}}"></div>
+        </div>
+        <div class="label">{{label}}</div>
+    </li>
+
+    {{/with}}
+
+</template>
