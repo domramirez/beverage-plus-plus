@@ -5,6 +5,8 @@
 Meteor.methods({
 	incrementBeverageCount: function(categoryId)
 	{
-		DB.categories.update({_id: categoryId}, {$inc: {count: 1}});
+		//If the user is logged in, increment count on category document
+		if(Meteor.userId())
+			DB.categories.update({_id: categoryId}, {$inc: {count: 1}});
 	}
 });
